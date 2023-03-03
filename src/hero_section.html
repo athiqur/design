@@ -1,0 +1,24 @@
+<div class="uk-position-relative uk-visible-toggle overflow-hidden mb-8 lg:-mt-20" tabindex="-1"
+        uk-slideshow="animation: scale ;min-height: 200; max-height: 500 ;autoplay: true">
+        
+        <ul class="uk-slideshow-items rounded">
+            {% for section in hero_section %}
+            <li>
+                {% include "./cover_image.html" %}
+                <div class="container relative p-20 lg:mt-12 h-full"> 
+                  <div uk-slideshow-parallax="scale: 1,1,0.8" class="flex flex-col justify-center h-full w-full space-y-3">
+                      {% include "./headline.html" %}
+                      {% include "./sub_headline.html" %}
+                      {% include "./call_to_action.html" %}
+                  </div>
+                </div>
+            </li> 
+            {% endfor %}
+        </ul> 
+        
+        <a class="uk-position-center-left-out uk-position-small uk-hidden-hover slidenav-prev" href="#"
+            uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right-out uk-position-small uk-hidden-hover slidenav-next" href="#"
+            uk-slideshow-item="next"></a>
+
+</div> 

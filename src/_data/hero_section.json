@@ -1,0 +1,23 @@
+[
+    {
+        "coverImage": "../assets/images/hero-1.jpg",
+        "headline": "Athiqur",
+        "subHeadline": "I'm a web developer and designer.",
+        "cta": {
+            "text": "Learn More",
+            "link": "/about"
+        }
+    },
+
+    {
+        "coverImage": "../assets/images/hero-1.jpg",
+        "headline": "Madhesh",
+        "subHeadline": "I'm a web developer and designer.",
+        "cta": {
+            "text": "Learn More",
+            "link": "/about"
+        }
+    }
+
+
+]

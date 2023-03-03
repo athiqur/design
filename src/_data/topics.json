@@ -1,0 +1,36 @@
+[
+    {
+     "name" : "Web development",
+     "icon" : "newspaper-outline"
+    },
+
+   {
+    "name" : "Mobile App",
+    "icon" : "leaf-outline"
+   },
+
+   {
+    "name" : "Business",
+    "icon" : "briefcase-outline"
+   },
+
+   {
+    "name" : "Desings",
+    "icon" : "color-palette-outline"
+   },
+
+   {
+    "name" : "Marketing",
+    "icon" : "megaphone-outline"
+   },
+
+   {
+    "name" : "Photography",
+    "icon" : "camera-outline"
+   },
+
+   {
+    "name" : "Life Style",
+    "icon" : "accessibility-outline"
+   }
+]

@@ -1,0 +1,145 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>Courseplus Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Courseplus is - Professional A unique and beautiful collection of UI elements">
+
+    <!-- Favicon -->
+    <link href="../assets/images/favicon.png" rel="icon" type="image/png">
+
+    <!-- icons
+    ================================================== -->
+    <link rel="stylesheet" href="../assets/css/icons.css">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../assets/css/uikit.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+          background: white !important
+        }
+      
+        .container {
+          max-width: 1000px;
+        }
+        .delimiter-bottom,
+        .delimiter-top {
+            position: relative
+        }
+        
+        .delimiter-top:before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            margin-left: -40%;
+            content: '';
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0, rgba(255, 255, 255, 0) 75%)
+        }
+        
+        .delimiter-bottom:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            margin-left: -40%;
+            content: '';
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0, rgba(255, 255, 255, 0) 75%)
+        }
+        
+        @media (min-width: 960px) {
+          .view-on-mobile{  display: none; }
+        }
+        @media (max-width: 960px) {
+          .hide-on-mobile{  display: none; }
+        }
+  
+  
+  
+        .demo-card {
+              color: #4a4a4a;
+              text-transform: capitalize;
+          }
+  
+          .demo-card img {
+              border-radius: 8px;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+              margin-right: 1px;
+          }
+  
+          .demo-card:hover.demo-card img,
+          .demo-card:hover span.new {
+              transition: 0.4s ease all;
+              transform: translateY(-10px);
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          }
+  
+          .demo-card span.new {
+              color: white;
+              padding: 2px 9px;
+              border-radius: 6px;
+              position: absolute;
+              z-index: 1;
+              right: -12px;
+              top: -13px;
+              box-shadow: 2px 2px 3px 0px #cecece;
+          }
+  
+          .demo-card p {
+              margin-top: 15px;
+              font-size: 16px;
+          }
+  
+          .bg {
+            backdrop-filter: saturate(50%) blur(6px);
+            background: #ffffffd1;
+           
+          }
+          .bg .text-3xl{
+            font-size: 1.5rem;
+            transition: 0.2s all, 0.2s
+          }
+          .bg .mb-2 {
+            margin-bottom: 0.3rem;
+            transition: 0.2s all, 0.2s
+          }
+      </style>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div id="wrapper" class="horizontal">
+        {% include "./navbar.html" %}
+        {% include "./hero_section.html" %}
+        
+      
+        <div class="mx-auto max-w-5xl p-4">
+        {% include "./featured_class.html" %}
+        {% include "./popular_classes.html" %}
+        {% include "./episodes.html" %}
+        </div>
+        {% include "./footer.html" %}
+    </div>
+           
+{% endblock %}
+
+
+{% block script %}
+{% include "./script.html" %}
+{% endblock %}
+

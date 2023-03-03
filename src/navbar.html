@@ -1,0 +1,23 @@
+<header class="is-transparent is-dark border-b backdrop-filter backdrop-blur-2xl"
+    uk-sticky="cls-inactive: is-dark is-transparent border-b">
+    <div class="header_inner">
+        <div class="left-side">
+
+            <!-- Logo -->
+            {% include "./logo.html" %}
+
+            <!-- icon menu for mobile -->
+            {% include "./hamburger.html" %}
+
+        </div>
+        <div class="right-side">
+
+            <!-- menu bar for mobile -->
+            {% include "./menu.html" %}
+
+               <!-- overly for small devices -->
+            <div class="overly" uk-toggle="target: .header_menu ; cls: is-visible"></div>
+
+        </div>
+    </div>
+</header>

@@ -1,0 +1,10 @@
+<a href="#"> Courses</a>
+<div uk-drop="mode: click" class="category-dropdown">
+    <ul>
+        {% for topic in topics %}
+        <li>
+            <a href="#">  <ion-icon name= {{ topic.icon }} class="is-icon"></ion-icon> {{ topic.name }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>Courseplus Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Courseplus is - Professional A unique and beautiful collection of UI elements">
+
+    <!-- Favicon -->
+    <link href="../assets/images/favicon.png" rel="icon" type="image/png">
+
+    <!-- icons
+    ================================================== -->
+    <link rel="stylesheet" href="../assets/css/icons.css">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../assets/css/uikit.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+          background: white !important
+        }
+      
+        .container {
+          max-width: 1000px;
+        }
+        .delimiter-bottom,
+        .delimiter-top {
+            position: relative
+        }
+        
+        .delimiter-top:before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            margin-left: -40%;
+            content: '';
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0, rgba(255, 255, 255, 0) 75%)
+        }
+        
+        .delimiter-bottom:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            width: 80%;
+            height: 1px;
+            margin-left: -40%;
+            content: '';
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0, rgba(255, 255, 255, 0) 75%)
+        }
+        
+        @media (min-width: 960px) {
+          .view-on-mobile{  display: none; }
+        }
+        @media (max-width: 960px) {
+          .hide-on-mobile{  display: none; }
+        }
+  
+  
+  
+        .demo-card {
+              color: #4a4a4a;
+              text-transform: capitalize;
+          }
+  
+          .demo-card img {
+              border-radius: 8px;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+              margin-right: 1px;
+          }
+  
+          .demo-card:hover.demo-card img,
+          .demo-card:hover span.new {
+              transition: 0.4s ease all;
+              transform: translateY(-10px);
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          }
+  
+          .demo-card span.new {
+              color: white;
+              padding: 2px 9px;
+              border-radius: 6px;
+              position: absolute;
+              z-index: 1;
+              right: -12px;
+              top: -13px;
+              box-shadow: 2px 2px 3px 0px #cecece;
+          }
+  
+          .demo-card p {
+              margin-top: 15px;
+              font-size: 16px;
+          }
+  
+          .bg {
+            backdrop-filter: saturate(50%) blur(6px);
+            background: #ffffffd1;
+           
+          }
+          .bg .text-3xl{
+            font-size: 1.5rem;
+            transition: 0.2s all, 0.2s
+          }
+          .bg .mb-2 {
+            margin-bottom: 0.3rem;
+            transition: 0.2s all, 0.2s
+          }
+      </style>
+
+</head>
+<body>
+    
+
+
+    <div id="wrapper" class="horizontal">
+        <header class="is-transparent is-dark border-b backdrop-filter backdrop-blur-2xl"
+    uk-sticky="cls-inactive: is-dark is-transparent border-b">
+    <div class="header_inner">
+        <div class="left-side">
+
+            <!-- Logo -->
+            <div id="logo">
+    <a href="home.html">
+        <img src="../assets/images/logo.png" alt="">
+        <img src="../assets/images/logo-light.png" class="logo_inverse" alt="">
+        <img src="../assets/images/logo-mobile.png" class="logo_mobile" alt="">
+    </a>
+</div>
+
+            <!-- icon menu for mobile -->
+            <div class="triger" uk-toggle="target: .header_menu ; cls: is-visible">
+</div>
+
+        </div>
+        <div class="right-side">
+
+            <!-- menu bar for mobile -->
+            <nav class="header_menu">
+    <ul>
+        <li>
+            <a href="#"> Courses</a>
+<div uk-drop="mode: click" class="category-dropdown">
+    <ul>
+        
+        <li>
+            <a href="#">  <ion-icon name= newspaper-outline class="is-icon"></ion-icon> Web development </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= leaf-outline class="is-icon"></ion-icon> Mobile App </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= briefcase-outline class="is-icon"></ion-icon> Business </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= color-palette-outline class="is-icon"></ion-icon> Desings </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= megaphone-outline class="is-icon"></ion-icon> Marketing </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= camera-outline class="is-icon"></ion-icon> Photography </a>
+        </li>
+        
+        <li>
+            <a href="#">  <ion-icon name= accessibility-outline class="is-icon"></ion-icon> Life Style </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </li>
+        
+
+        <li> <a href= "categories" >Categories</a></li>
+
+        
+
+        <li> <a href= "#" >Login</a></li>
+
+        
+
+        <li> <a href= "" >Register</a></li>
+
+        
+    </ul>
+</nav>
+
+               <!-- overly for small devices -->
+            <div class="overly" uk-toggle="target: .header_menu ; cls: is-visible"></div>
+
+        </div>
+    </div>
+</header>
+        <div class="uk-position-relative uk-visible-toggle overflow-hidden mb-8 lg:-mt-20" tabindex="-1"
+        uk-slideshow="animation: scale ;min-height: 200; max-height: 500 ;autoplay: true">
+        
+        <ul class="uk-slideshow-items rounded">
+            
+            <li>
+                <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+    <img src="../assets/images/hero-1.jpg" class="object-cover" alt="" uk-cover>
+</div>
+                <div class="container relative p-20 lg:mt-12 h-full"> 
+                  <div uk-slideshow-parallax="scale: 1,1,0.8" class="flex flex-col justify-center h-full w-full space-y-3">
+                      <h1 uk-slideshow-parallax="y: 100,0,0" class="lg:text-4xl text-2xl text-white font-semibold"> Athiqur</h1>
+
+                      <p uk-slideshow-parallax="y: 150,0,0" class="text-base text-white font-medium pb-4 lg:w-1/2">I&#39;m a web developer and designer. </p>
+
+                      <a uk-slideshow-parallax="y: 200,0,50" href=/about class="bg-opacity-90 bg-white py-2.5 rounded-md text-base text-center w-32"> Learn More </a> 
+
+                  </div>
+                </div>
+            </li> 
+            
+            <li>
+                <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+    <img src="../assets/images/hero-1.jpg" class="object-cover" alt="" uk-cover>
+</div>
+                <div class="container relative p-20 lg:mt-12 h-full"> 
+                  <div uk-slideshow-parallax="scale: 1,1,0.8" class="flex flex-col justify-center h-full w-full space-y-3">
+                      <h1 uk-slideshow-parallax="y: 100,0,0" class="lg:text-4xl text-2xl text-white font-semibold"> Madhesh</h1>
+
+                      <p uk-slideshow-parallax="y: 150,0,0" class="text-base text-white font-medium pb-4 lg:w-1/2">I&#39;m a web developer and designer. </p>
+
+                      <a uk-slideshow-parallax="y: 200,0,50" href=/about class="bg-opacity-90 bg-white py-2.5 rounded-md text-base text-center w-32"> Learn More </a> 
+
+                  </div>
+                </div>
+            </li> 
+            
+        </ul> 
+        
+        <a class="uk-position-center-left-out uk-position-small uk-hidden-hover slidenav-prev" href="#"
+            uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right-out uk-position-small uk-hidden-hover slidenav-next" href="#"
+            uk-slideshow-item="next"></a>
+
+</div> 
+        
+      
+        <div class="mx-auto max-w-5xl p-4">
+        <!--  course feature -->
+<div class="sm:my-4 my-3 flex items-end justify-between pt-3">
+    <h2 class="text-2xl font-semibold"> Featured Classes   </h2> 
+</div> 
+
+<div class="relative -mt-3" uk-slider="finite: true">
+    <div class="uk-slider-container px-1 py-3">
+        <ul class="uk-slider-items uk-child-width-1-1@m uk-grid">
+            
+            <li>
+                        
+                <div class="bg-white shadow-sm rounded-lg uk-transition-toggle md:flex">
+                    <div class="md:w-5/12 md:h-60 h-40 overflow-hidden rounded-l-lg relative">
+                        <img src="../assets/images/courses/img-6.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                        <img src="../assets/images/icon-play.svg" class="w-16 h-16 uk-position-center uk-transition-fade" alt="">
+                    </div>
+                    <div class="flex-1 md:p-6 p-4">
+                        <div class="font-semibold line-clamp-2 md:text-xl md:leading-relaxed">Learn How to Build Responsive Web Design Essentials HTML5 CSS3 and Bootstrap </div>
+                        <div class="line-clamp-2 mt-2 md:block hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</div>
+                        <div class="font-semibold mt-3"> John Michael </div>
+                        <div class="mt-1 flex items-center justify-between">
+                            <div class="flex space-x-2 items-center text-sm pt-2">
+                                <div> 13 hours </div>
+                                <div>·</div>
+                                <div> 32 lectures </div>
+                            </div>
+                            <div class="text-lg font-semibold"> $14.99 </div>
+                        </div>
+                    </div> 
+                </div>
+            </li>
+            
+            <li>
+                        
+                <div class="bg-white shadow-sm rounded-lg uk-transition-toggle md:flex">
+                    <div class="md:w-5/12 md:h-60 h-40 overflow-hidden rounded-l-lg relative">
+                        <img src="../assets/images/courses/img-6.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                        <img src="../assets/images/icon-play.svg" class="w-16 h-16 uk-position-center uk-transition-fade" alt="">
+                    </div>
+                    <div class="flex-1 md:p-6 p-4">
+                        <div class="font-semibold line-clamp-2 md:text-xl md:leading-relaxed">Learn JavaScript and Express to become a professional JavaScript developer. </div>
+                        <div class="line-clamp-2 mt-2 md:block hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</div>
+                        <div class="font-semibold mt-3"> John Michael </div>
+                        <div class="mt-1 flex items-center justify-between">
+                            <div class="flex space-x-2 items-center text-sm pt-2">
+                                <div> 13 hours </div>
+                                <div>·</div>
+                                <div> 32 lectures </div>
+                            </div>
+                            <div class="text-lg font-semibold"> $14.99 </div>
+                        </div>
+                    </div> 
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <a class="absolute bg-white uk-position-center-left -ml-3 flex items-center justify-center p-2 rounded-full shadow-md text-xl w-11 h-11 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+    <a class="absolute bg-white uk-position-center-right -mr-3 flex items-center justify-center p-2 rounded-full shadow-md text-xl w-11 h-11 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+
+</div>
+
+        
+<div class="sm:my-4 my-3 flex items-end justify-between pt-3">
+    <h2 class="text-2xl font-semibold"> Popular Classes  </h2>
+<a href="#" class="text-blue-500 sm:block hidden"> See all </a>
+</div> 
+
+
+
+<div class="mt-3">
+
+    <h4 class="py-3 border-b font-semibold text-grey-700  mx-1 mb-4" hidden> <ion-icon name="star"></ion-icon> Featured today </h4>
+    
+    <div class="relative" uk-slider="finite: true">
+    
+        <div class="uk-slider-container px-1 py-3">
+            <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small uk-grid">
+                
+                <li>
+                    <a href="course-intro.html" class="uk-link-reset">
+                        <div class="bg-white shadow-sm rounded-lg uk-transition-toggle">
+                            <div class="w-full h-40 overflow-hidden rounded-t-lg relative">
+                                <img src="../assets/images/courses/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center uk-transition-fade" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-semibold line-clamp-2"> Learn JavaScript and Express to become a professional
+                JavaScript developer. </div>
+                                <div class="flex space-x-2 items-center text-sm pt-3">
+                                    <div>  13 hours  </div>
+                                    <div>·</div>
+                                    <div> 32 lectures </div>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between">
+                                    <div class="text-sm font-semibold"> John Michael </div>
+                                    <div class="text-lg font-semibold"> $14.99 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="course-intro.html" class="uk-link-reset">
+                        <div class="bg-white shadow-sm rounded-lg uk-transition-toggle">
+                            <div class="w-full h-40 overflow-hidden rounded-t-lg relative">
+                                <img src="../assets/images/courses/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center uk-transition-fade" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-semibold line-clamp-2"> Learn Angular Fundamentals From beginning to advance </div>
+                                <div class="flex space-x-2 items-center text-sm pt-3">
+                                    <div>  13 hours  </div>
+                                    <div>·</div>
+                                    <div> 32 lectures </div>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between">
+                                    <div class="text-sm font-semibold"> John Michael </div>
+                                    <div class="text-lg font-semibold"> $14.99 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="course-intro.html" class="uk-link-reset">
+                        <div class="bg-white shadow-sm rounded-lg uk-transition-toggle">
+                            <div class="w-full h-40 overflow-hidden rounded-t-lg relative">
+                                <img src="../assets/images/courses/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center uk-transition-fade" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-semibold line-clamp-2"> Responsive Web Design Essentials HTML5 CSS3 Bootstrap </div>
+                                <div class="flex space-x-2 items-center text-sm pt-3">
+                                    <div>  13 hours  </div>
+                                    <div>·</div>
+                                    <div> 32 lectures </div>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between">
+                                    <div class="text-sm font-semibold"> John Michael </div>
+                                    <div class="text-lg font-semibold"> $14.99 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="course-intro.html" class="uk-link-reset">
+                        <div class="bg-white shadow-sm rounded-lg uk-transition-toggle">
+                            <div class="w-full h-40 overflow-hidden rounded-t-lg relative">
+                                <img src="../assets/images/courses/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center uk-transition-fade" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-semibold line-clamp-2"> Learn JavaScript and Express to become a professional
+                JavaScript developer. </div>
+                                <div class="flex space-x-2 items-center text-sm pt-3">
+                                    <div>  13 hours  </div>
+                                    <div>·</div>
+                                    <div> 32 lectures </div>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between">
+                                    <div class="text-sm font-semibold"> John Michael </div>
+                                    <div class="text-lg font-semibold"> $14.99 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="course-intro.html" class="uk-link-reset">
+                        <div class="bg-white shadow-sm rounded-lg uk-transition-toggle">
+                            <div class="w-full h-40 overflow-hidden rounded-t-lg relative">
+                                <img src="../assets/images/courses/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center uk-transition-fade" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-semibold line-clamp-2"> Design patterns </div>
+                                <div class="flex space-x-2 items-center text-sm pt-3">
+                                    <div>  13 hours  </div>
+                                    <div>·</div>
+                                    <div> 32 lectures </div>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between">
+                                    <div class="text-sm font-semibold"> John Michael </div>
+                                    <div class="text-lg font-semibold"> $14.99 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+    
+            <a class="absolute bg-white top-1/4 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+            <a class="absolute bg-white top-1/4 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+    
+        </div>
+    </div>
+    
+    </div>
+        <div class="tube-card p-4 mt-3" uk-toggle="cls: tube-card p-4; mode: media; media: 640">
+
+    <h4 class="py-3 px-5 border-b font-semibold text-grey-700 -mx-4 -mt-3 mb-4"> Latest Episodes </h4>
+
+    <div class="relative -mx-1" uk-slider="finite: true">
+
+            <div class="uk-slider-container md:px-1 px-2 py-3">
+                <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2 uk-grid-small uk-grid">
+                    <li>
+                        <a href="episodes-watch.html">
+                            <div class="w-full md:h-40 h-28 overflow-hidden rounded-lg relative">
+                                <img src="../assets/images/episodes/img-2.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <span
+                                    class="absolute bottom-2 right-2 px-2 py-1 text-xs font-semibold bg-black bg-opacity-50 text-white rounded">
+                                    12:21</span>
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center" alt="">
+                            </div>
+                        </a>
+                        <div class="pt-3">
+                            <a href="episodes-watch.html" class="font-semibold line-clamp-2">  The PHP Singleton class  </a>
+                            <p class="text-sm pt-1"> By <a href="#"> Stella Johnson  </a> </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="episodes-watch.html">
+                            <div class="w-full md:h-40 h-28 overflow-hidden rounded-lg relative">
+                                <img src="../assets/images/episodes/img-4.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <span class="absolute bottom-2 right-2 px-2 py-1 text-xs font-semibold bg-black bg-opacity-50 text-white rounded">
+                                    12:21</span>
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center" alt="">
+                            </div>
+                        </a>
+                        <div class="pt-3">
+                            <a href="episodes-watch.html" class="font-semibold line-clamp-2">  Larafel $ fliepond   </a>
+                            <p href="episodes-watch.html" class="text-sm pt-1"> By <a href="#"> Jesse Stevens </a> </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="episodes-watch.html">
+                            <div class="w-full md:h-40 h-28 overflow-hidden rounded-lg relative">
+                                <img src="../assets/images/episodes/img-1.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <span class="absolute bottom-2 right-2 px-2 py-1 text-xs font-semibold bg-black bg-opacity-50 text-white rounded">
+                                    12:21</span>
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center" alt="">
+                            </div>
+                        </a>
+                        <div class="pt-3">
+                            <a href="episodes-watch.html" class="font-semibold line-clamp-2">  Creating a Laravel Package   </a>
+                            <p class="text-sm pt-1"> By <a href="#"> John Michael </a> </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="episodes-watch.html">
+                            <div class="w-full md:h-40 h-28 overflow-hidden rounded-lg relative">
+                                <img src="../assets/images/episodes/img-3.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                                <span class="absolute bottom-2 right-2 px-2 py-1 text-xs font-semibold bg-black bg-opacity-50 text-white rounded">
+                                    12:21</span>
+                                <img src="../assets/images/icon-play.svg" class="w-12 h-12 uk-position-center" alt="">
+                            </div>
+                        </a>
+                        <div class="pt-3">
+                            <a href="episodes-watch.html" class="font-semibold line-clamp-2">  Creating sticky in HTML   </a>
+                            <p class="text-sm pt-1"> By <a href="#"> Monroe Parker </a> </p>
+                        </div>
+                    </li> 
+                </ul>
+
+            <a class="absolute bg-white top-16 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="previous">  <ion-icon name="chevron-back-outline"></ion-icon> </a>
+            <a class="absolute bg-white top-16 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white" href="#" uk-slider-item="next"> <ion-icon name="chevron-forward-outline"></ion-icon></a>
+
+            </div>
+
+    </div>
+
+</div>
+        </div>
+        <div class="lg:mt-28 mt-10 mb-7 px-12 border-t pt-7">
+    <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
+        <p class="capitalize font-medium"> © copyright 2021  Courseplus</p>
+        <div class="lg:flex space-x-4 text-gray-700 capitalize hidden">
+            <a href="#"> About</a>
+            <a href="#"> Help</a>
+            <a href="#"> Terms</a>
+            <a href="#"> Privacy</a>
+        </div>
+    </div>
+</div>
+    </div>
+           
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../assets/js/uikit.js"></script>
+<script src="../assets/js/tippy.all.min.js"></script>
+<script src="../assets/js/simplebar.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/bootstrap-select.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+</html>

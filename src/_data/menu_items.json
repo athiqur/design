@@ -1,0 +1,19 @@
+[
+    {
+        "text" : "Categories",
+        "link" : "categories"
+    },
+
+    {
+        "text" : "Login",
+        "link" : "#"
+    },
+
+
+    {
+        "text" : "Register",
+        "link" : ""
+    }
+
+
+]
